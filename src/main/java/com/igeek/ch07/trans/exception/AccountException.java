@@ -1,6 +1,6 @@
 package com.igeek.ch07.trans.exception;
 
-public class AccountException extends  Exception {
+public class AccountException extends  RuntimeException {
 
     public AccountException() {
     }
