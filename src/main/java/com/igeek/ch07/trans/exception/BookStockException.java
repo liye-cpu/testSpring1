@@ -1,6 +1,6 @@
 package com.igeek.ch07.trans.exception;
 
-public class BookStockException extends  Exception {
+public class BookStockException extends  RuntimeException {
 
     public BookStockException() {
     }

@@ -20,7 +20,7 @@ public class BookShopDaoImpl implements IBookShopDao {
     }
 
     @Override
-    public void updateStock(int bookId) throws BookStockException {
+    public void updateStock(int bookId)/* throws BookStockException*/ {
         String s = "select stock from t_stock where bookId=?";
         int stock = jdbcTemplate.queryForObject(s, Integer.class, bookId);
         if(stock<=0){
@@ -32,7 +32,7 @@ public class BookShopDaoImpl implements IBookShopDao {
     }
 
     @Override
-    public void updateBalance(String username, int price) throws AccountException {
+    public void updateBalance(String username, int price) /*throws AccountException*/ {
         String s = "select balance from t_account where username=?";
         Integer balance = jdbcTemplate.queryForObject(s, Integer.class, username);
         if(balance<price){
